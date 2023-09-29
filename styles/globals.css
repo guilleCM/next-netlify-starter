@@ -11,12 +11,11 @@ body {
 }
 
 main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 65rem;
+  margin-top: 2em;
 }
 
 code {
@@ -30,6 +29,13 @@ code {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1045px) {
+  main {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
