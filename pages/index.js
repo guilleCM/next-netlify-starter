@@ -1,13 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 
-import Footer from '@components/Footer'
-import Ribbon from '@components/Ribbon'
-import InstagramFeed from '@components/InstagramFeed'
+import Footer from '@components/Footer';
+import Ribbon from '@components/Ribbon';
+import InstagramFeed from '@components/InstagramFeed';
+import Steps from '@components/Steps';
 
-import styles from '../styles/index.module.css'
+import styles from '../styles/index.module.css';
 
-export default function Home() {
+export default function Home({ igFeed }) {
   return (
     <div className="container">
       <Head>
@@ -17,7 +18,7 @@ export default function Home() {
       <Ribbon />
       <main>
         <div className={styles.hero}>
-          <h2>🎨<br />Crea una obra de arte de tu mascota<br />🐶🐱</h2>
+          <h1>🎨<br />Crea una obra de arte de tu mascota<br />🐶🐱</h1>
           <div>
             <Image
               src="/hero1.webp"
@@ -29,14 +30,38 @@ export default function Home() {
             />
           </div>
         </div>
-        <a href='https://www.instagram.com/dream.pup.art/' target='_blank'>
-          <p className={styles.followUs}>SIGUENOS EN INSTAGRAM</p>
+        <Steps />
+
+        <a href='https://www.instagram.com/dream.pup.art/' target='_blank' className={styles.followUs}>
+          <span>Síguenos en Instagram</span>
         </a>
-        <InstagramFeed token={'IGQWRNNkRUVWFkZAzd4U3NWSEVCQmdwaGRqZA3FtR0ZANUlBXWUtGeDBXcjFSNVVGbVpId1ZAvOEUzVHhOQ19faWo5YlhDWEwxekh0ZAks3VUtPVmxLQm1kZAUMtVzB4NFdKYUZApR3ZABZAi1WamllN2hUVDVtclNmQmdfdkkZD'} limit={12} />
+        <InstagramFeed feed={igFeed} />
 
       </main>
 
       <Footer />
     </div>
   )
-}
+};
+
+export async function getStaticProps() {
+  const limit = 12;
+  const token = process?.env?.IG_TOKEN;
+  const igFeed = [];
+  if (token) {
+    console.log(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${limit}&access_token=${token}`);
+    try {
+      const igRs = await fetch(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${limit}&access_token=${token}`)
+      const igFeedRs = await igRs.json();
+      if (igFeedRs?.data) {
+        igFeedRs?.data.map((post) => {
+          igFeed.push(post);
+          return post;
+        })
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return { props: { igFeed }};
+};

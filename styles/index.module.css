@@ -2,23 +2,34 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.hero h2 {
+.hero h1 {
   font-size: 50px;
   margin: auto;
   text-align: center;
 }
 .followUs {
   margin-top: 1em;
+  margin-bottom: 1.5em;
   font-size: 1em;
   text-align: center;
+  text-decoration: none;
+}
+.followUs > span {
+  background-color: #FFC0CB;
+  padding: .5em 1em;
+  border-radius: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.followUs > span:hover {
+  box-shadow: 2px 3px 5px 2px #afafaf;
+  transition: box-shadow 0.3s ease-in-out;
 }
 @media (max-width: 1045px) {
   .hero {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .hero h2 {
+  .hero h1 {
     font-size: 1.5em;
     margin: auto;
-
   }
 }
