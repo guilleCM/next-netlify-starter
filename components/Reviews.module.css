@@ -1,0 +1,8 @@
+.carouselDiv > div {
+  background: black;
+  zoom: 0.3;
+}
+.carouselDiv > h2 {
+  font-size: 42px;
+  text-align: center;
+}

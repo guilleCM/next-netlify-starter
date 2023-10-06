@@ -1,17 +1,8 @@
-import { useEffect, useState } from "react";
 import Image from 'next/image';
-import AliceCarousel from 'react-alice-carousel';
 
-import 'react-alice-carousel/lib/alice-carousel.css';
 import styles from './Steps.module.css';
 
 export default function Steps() {
-  const handleDragStart = (e) => e.preventDefault();
-  const [ carouselItems, setCarouselItems ] = useState([]);
-  useEffect(() => {
-    const items = Array.apply(null, {length: 8}).map((item, index) => <Image src={`/product (${index+1}).webp`} onDragStart={handleDragStart} width={500} height={500} role="presentation" />);
-    setCarouselItems(items);
-  }, []);
   return (
     <>
       <div className={styles.step}>
@@ -50,7 +41,7 @@ export default function Steps() {
         </div>
         <div>
           <h2>
-            2. Sube fotos de tu mascota
+            2. Envíanos fotos de tu mascota
           </h2>
           <p>Mándanos de 12 a 20 fotos de tu mascota, en diferentes perspectivas y ángulos. Queremos conocer todos los detalles de tu peludito.</p>
         </div>
@@ -90,23 +81,6 @@ export default function Steps() {
           </h2>
           <p>Ahora que ya tienes las ilustraciones, puedes hacer lo que quieras con ellas. Qué tal enmarcarlas? Imprimir un lienzo? Crear una taza personalizada? O una bolsa reutilizable? Las opciones son infinitas!</p>
         </div>
-      </div>
-      <div className={styles.carouselDiv}>
-        <h2>Ideas originales de regalos</h2>
-        {carouselItems && carouselItems.length > 0 &&
-          <AliceCarousel
-            autoPlay
-            infinite
-            mouseTracking
-            disableButtonsControls
-            items={carouselItems}
-            responsive={{
-              0: { items: 1 },
-              568: { items: 2 },
-              1024: { items: 3 },
-            }}
-          />
-        }
       </div>
     </>
   )

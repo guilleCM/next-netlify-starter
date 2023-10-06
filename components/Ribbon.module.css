@@ -6,4 +6,15 @@
 .ribbon p {
   margin-top: .5em;
   margin-bottom: .5em;
+  cursor: pointer;
+}
+.collapsed {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.expanded {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }

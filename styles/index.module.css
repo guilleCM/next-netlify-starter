@@ -7,22 +7,67 @@
   margin: auto;
   text-align: center;
 }
+.orderUs {
+  font-size: 42px;
+  text-align: center;
+}
+.contactUs {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.contactUs > a {
+  display: flex;
+  margin-top: 0px;
+}
+.contactUs > a > span {
+  display: flex;
+  gap: 5px;
+}
 .followUs {
   margin-top: 1em;
   margin-bottom: 1.5em;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
+  color: black;
 }
 .followUs > span {
+  color: black;
   background-color: #FFC0CB;
   padding: .5em 1em;
   border-radius: 30px;
   transition: box-shadow 0.3s ease-in-out;
 }
+.followUs:active {
+  color: black;
+}
 .followUs > span:hover {
   box-shadow: 2px 3px 5px 2px #afafaf;
   transition: box-shadow 0.3s ease-in-out;
+}
+.orderNowButton > span {
+  background-color: #FFD700;
+  cursor: pointer;
+}
+.instagram > span {
+  background-color: #FFC0CB;
+}
+.whatsapp > span {
+  background-color: #ADD8E6;
+}
+@media (max-width: 768px) {
+  .contactUs {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .orderUs {
+    font-size: 1.5em;
+  }
+  .main h2 {
+    font-size: 1.5em;
+  }
 }
 @media (max-width: 1045px) {
   .hero {
