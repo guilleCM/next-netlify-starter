@@ -44,10 +44,10 @@ export default function Home({ igFeed }) {
         </div>
         <h2 id='order-now' className={styles.orderUs}>Haz tu pedido</h2>
         <div className={styles.contactUs}>
-          <a href='https://www.instagram.com/dream.pup.art/' target='_blank' className={styles.followUs}>
+          <a href='https://ig.me/m/dream.pup.art' className={styles.followUs}>
             <span>
               <Image
-                src="/instagram-logo.png"
+                src="/ig.webp"
                 alt="ig logo"
                 layout="fixed"
                 width={20}
@@ -57,10 +57,10 @@ export default function Home({ igFeed }) {
               Instagram
             </span>
           </a>
-          <a href='https://wa.me/34717114964' target='_blank' className={`${styles.followUs} ${styles.whatsapp}`}>
+          <a href='https://wa.me/34717114964' className={`${styles.followUs} ${styles.whatsapp}`}>
             <span>
               <Image
-                src="/whatsapp-logo.png"
+                src="/wa.webp"
                 alt="whatsapp logo"
                 layout="fixed"
                 width={20}
@@ -73,10 +73,10 @@ export default function Home({ igFeed }) {
           <a href='mailto:dream.pup.art.ig@gmail.com' className={`${styles.followUs} ${styles.orderNowButton}`}>
             <span>
               <Image
-                src="/mail-logo.png"
+                src="/mail.webp"
                 alt="mail logo"
                 layout="fixed"
-                width={28}
+                width={20}
                 height={20}
                 priority
               />
