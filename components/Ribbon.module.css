@@ -4,8 +4,7 @@
   background: #FFC0CB;
 }
 .ribbon p {
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin: .5em;
   cursor: pointer;
 }
 .collapseContent {
@@ -20,4 +19,13 @@
   display: block;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+}
+.expandedCaret {
+  display: inline-block;
+  transform: rotate(180deg);
+  position: relative;
+  top: 2px;
+}
+.seeMoreWrapper:hover .seeMore {
+  text-decoration: underline;
 }

@@ -45,7 +45,13 @@ export default function Ribbon() {
   return (
     <div className={styles.ribbon}>
       <p onClick={() => setIsCollapsed(!isCollapsed)}>
-      ↓ 🦇🎃Durante el mes de Octubre, recibe una ilustracion de Halloween <b>GRATIS</b> con tu pedido🎃🦇 ↓
+      🎃Durante el mes de Octubre, recibe una ilustracion de Halloween <b>GRATIS</b> con tu pedido🎃
+      <br/>
+      <span className={styles.seeMoreWrapper}>
+        <span className={!isCollapsed ? styles.expandedCaret : ''}>↓</span>
+        <span className={styles.seeMore}>{!isCollapsed ? ' Ocultar ejemplos ' : ' Ver ejemplos '}</span>
+        <span className={!isCollapsed ? styles.expandedCaret : ''}>↓</span>
+      </span>
       </p>
       <Collapse collapsed={isCollapsed} carouselItems={carouselItems} />
     </div>

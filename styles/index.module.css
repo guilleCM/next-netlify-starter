@@ -25,8 +25,8 @@
   gap: 5px;
 }
 .followUs {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
@@ -61,6 +61,9 @@
     flex-direction: column;
     gap: 0;
     align-items: center;
+  }
+  .contactUs > a {
+    margin-bottom: 0.5em;
   }
   .orderUs {
     font-size: 1.5em;

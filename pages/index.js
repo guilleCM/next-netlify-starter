@@ -42,7 +42,7 @@ export default function Home({ igFeed }) {
             />
           </div>
         </div>
-        <h2 id='order-now' className={styles.orderUs}>Haz tu pedido</h2>
+        <h2 id='order-now' className={styles.orderUs}>Haz tu pedido por:</h2>
         <div className={styles.contactUs}>
           <a href='https://ig.me/m/dream.pup.art' className={styles.followUs}>
             <span>
