@@ -13,7 +13,8 @@ export default function GiftIdeas() {
   }, []);
   return (
     <div className={styles.carouselDiv}>
-      <h2>Ideas originales para tus ilustraciones</h2>
+      <h2>Qué puedes hacer con tus ilustraciones</h2>
+      <p className={styles.subtitle}>REGALOS ORIGINALES · CUADROS · LIENZOS · TAZAS PERSONALIZADAS · BOLSAS REUTILIZABLES · IMANES · ETIQUETA DE EQUIPAJE · CONTENIDO PARA REDES SOCIALES · FOTOS DE PERFIL · DECORACIÓN · IMPRESIONES PERSONALIZADAS</p>
       {carouselItems && carouselItems.length > 0 &&
         <AliceCarousel
           autoPlay

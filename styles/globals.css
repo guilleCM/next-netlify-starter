@@ -18,6 +18,13 @@ main {
   margin-top: 2em;
 }
 
+h1 {
+  font-family: 'Lobster Two', cursive;
+}
+a {
+  font-family: 'Lobster Two', cursive;
+}
+
 code {
   background: #fafafa;
   border-radius: 5px;

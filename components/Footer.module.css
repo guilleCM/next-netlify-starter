@@ -16,6 +16,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.logoText {
+  font-family: 'Lobster Two', cursive;
+}
 .logoWrapper {
   display: flex;
   align-items: center;

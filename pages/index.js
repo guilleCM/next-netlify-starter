@@ -18,6 +18,12 @@ export default function Home({ igFeed }) {
     <div className="container">
       <Head>
         <title>Dream Pup Art</title>
+        <meta name="title" content="Dream Pup Art. Crea un recuerdo personalizado de tu mascota" />
+        <meta name="description" content="Creamos ilustraciones originales y a medida de tu mascota. Regalos únicos para los amantes de los perros y gatos." />
+        <meta name="keywords" content="regalos originales, perros, gatos" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="Spanish"></meta>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -26,6 +32,9 @@ export default function Home({ igFeed }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
       </Head>
       <Ribbon />
       <main className={styles.main}>
@@ -42,7 +51,7 @@ export default function Home({ igFeed }) {
             />
           </div>
         </div>
-        <h2 id='order-now' className={styles.orderUs}>Haz tu pedido por:</h2>
+        <h2 id='order-now' className={styles.orderUs}>Haz tu pedido a través de:</h2>
         <div className={styles.contactUs}>
           <a href='https://ig.me/m/dream.pup.art' className={styles.followUs}>
             <span>
@@ -84,6 +93,7 @@ export default function Home({ igFeed }) {
             </span>
           </a>
         </div>
+        <h2 className={styles.howItWorks}>¿Cómo funciona?</h2>
         <Steps />
         <p onClick={onClickOrderNow} className={`${styles.followUs} ${styles.orderNowButton}`}>
           <span>Haz tu pedido ahora</span>

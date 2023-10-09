@@ -51,7 +51,7 @@ export default function Steps() {
           <h2>
             3. Aprueva los resultados
           </h2>
-          <p>Te crearemos mínimo 4 ilustraciones de cada estilo que hayas elegido. Elige las que más te gusten o quédatelas todas. Si quieres modificar algo aún estas a tiempo.</p>
+          <p>Crearemos 4 ilustraciones de cada estilo que hayas elegido. Elige las que más te gusten o quédatelas todas. Si quieres modificar algo aún estas a tiempo.</p>
         </div>
         <div>
           <Image
@@ -79,7 +79,7 @@ export default function Steps() {
           <h2>
             4. Disfruta de tus ilustraciones
           </h2>
-          <p>Ahora que ya tienes las ilustraciones, puedes hacer lo que quieras con ellas. Qué tal enmarcarlas? Imprimir un lienzo? Crear una taza personalizada? O una bolsa reutilizable? Las opciones son infinitas!</p>
+          <p>Recibirás las ilustraciones por correo electrónico o Google Drive. Ahora ya puedes hacer lo que quieras con ellas. Qué tal enmarcarlas? Imprimir un lienzo? Crear una taza personalizada? O una bolsa reutilizable? Las opciones son infinitas!</p>
         </div>
       </div>
     </>
