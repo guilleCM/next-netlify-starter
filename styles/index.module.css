@@ -7,6 +7,10 @@
   margin: auto;
   text-align: center;
 }
+.subtitle {
+  text-align: center;
+  font-size: 1.25em;
+}
 .orderUs {
   font-size: 42px;
   text-align: center;
@@ -61,6 +65,9 @@
 }
 .whatsapp > span {
   background-color: #ADD8E6;
+}
+.moreStyles {
+  margin-top: 1em;
 }
 @media (max-width: 768px) {
   .contactUs {

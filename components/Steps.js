@@ -3,6 +3,9 @@ import Image from 'next/image';
 import styles from './Steps.module.css';
 
 export default function Steps() {
+  const onClickStyles = () => {
+    document.querySelector('#available-styles').scrollIntoView({ behavior: 'smooth' });
+  }
   return (
     <>
       <div className={styles.step}>
@@ -16,6 +19,7 @@ export default function Steps() {
             <li><strong>16 €</strong> 2 Estilos + collage</li>
             <li><strong>20 €</strong> 3 Estilos + collage</li>
           </ul>
+          <span onClick={onClickStyles} className={styles.moreStyles}>Explora nuestros estilos</span>
         </div>
         <div>
           <Image

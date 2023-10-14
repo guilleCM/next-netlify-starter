@@ -14,3 +14,16 @@
 .subtitle {
   text-align: center;
 }
+.carouselDiv :global .alice-carousel__dots-item {
+  background-color: black;
+  opacity: 0.25 !important;
+}
+.carouselDiv :global .alice-carousel__dots-item.__active {
+  background-color: black !important;
+  opacity: 1 !important;
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 0.825em;
+  }
+}

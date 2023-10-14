@@ -3,10 +3,6 @@ import Image from 'next/image';
 
 import Footer from '@components/Footer';
 import Ribbon from '@components/Ribbon';
-import InstagramFeed from '@components/InstagramFeed';
-import Steps from '@components/Steps';
-import Reviews from '@components/Reviews';
-import GiftIdeas from '@components/GiftIdeas';
 import AvailableStyles from '@components/AvailableStyles';
 
 import styles from '../styles/index.module.css';
@@ -16,37 +12,130 @@ const availableStyles = [
     id: '1',
     media_url: '/available-styles/minimalist-portrait/1.webp',
     caption: 'Retrato minimalista',
-    href: '/styles',
   },
   {
     id: '2',
     media_url: '/available-styles/aquarela-water/1.webp',
     caption: 'Aquarela',
-    href: '/styles',
   },
   {
     id: '3',
     media_url: '/available-styles/catching-treats/1.webp',
     caption: 'Atrapando comida',
-    href: '/styles',
   },
   {
     id: '4',
     media_url: '/available-styles/then-and-now/1.webp',
     caption: 'Pasado y presente',
-    href: '/styles',
+  },
+  {
+    id: '5',
+    media_url: '/available-styles/animated/1.webp',
+    caption: 'Animado',
+  },
+  {
+    id: '6',
+    media_url: '/available-styles/bold-drawing/2.webp',
+    caption: 'Comic lineado grueso',
+  },
+  {
+    id: '7',
+    media_url: '/available-styles/fine-comic/1.webp',
+    caption: 'Comic oriental',
+  },
+  {
+    id: '7.5',
+    media_url: '/available-styles/western-comic/1.webp',
+    caption: 'Comic Western',
+  },
+  {
+    id: '8',
+    media_url: '/available-styles/wild-drawing/1.webp',
+    caption: 'Dibujo salvaje',
+  },
+  {
+    id: '9',
+    media_url: '/available-styles/business-portrait/1.webp',
+    caption: 'Retrato elegante',
+  },
+  {
+    id: '10',
+    media_url: '/available-styles/fantasy-portrait/1.webp',
+    caption: 'Retrato de fantasía',
+  },
+  {
+    id: '11',
+    media_url: '/available-styles/ink-style/2.webp',
+    caption: 'Ink Style',
+  },
+  {
+    id: '12',
+    media_url: '/available-styles/nature-portrait/1.webp',
+    caption: 'Retrato naturaleza',
+  },
+  {
+    id: '13',
+    media_url: '/available-styles/oil-painting/1.webp',
+    caption: 'Oil painting',
+  },
+  {
+    id: '14',
+    media_url: '/available-styles/jedi/1.webp',
+    caption: 'Jedi',
+  },
+  {
+    id: '15',
+    media_url: '/available-styles/cooking/1.webp',
+    caption: 'Cocinero',
+  },
+  {
+    id: '16',
+    media_url: '/available-styles/custom-outfit/1.webp',
+    caption: 'Disfraz personalizado',
+  },
+  {
+    id: '17',
+    media_url: '/available-styles/bathroom/1.webp',
+    caption: 'WC',
+  },
+  {
+    id: '18',
+    media_url: '/available-styles/autumn/1.webp',
+    caption: 'Otoñal',
+  },
+  {
+    id: '19',
+    media_url: '/available-styles/halloween/1.webp',
+    caption: 'Halloween',
+  },
+  {
+    id: '20',
+    media_url: '/available-styles/halloween/1.webp',
+    caption: 'Halloween',
+  },
+  {
+    id: '21',
+    media_url: '/available-styles/christmas/1.webp',
+    caption: 'Navidad',
+  },
+  {
+    id: '22',
+    media_url: '/available-styles/happy-bday/1.webp',
+    caption: 'Feliz Cumpleaños',
+  },
+  {
+    id: '23',
+    media_url: '/available-styles/collage/1.webp',
+    caption: 'Collage',
   },
 ];
-export default function Home({ igFeed }) {
-  const onClickOrderNow = () => {
-    document.querySelector('#order-now').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+export default function Styles() {
   return (
     <div className="container">
       <Head>
-        <title>Dream Pup Art</title>
-        <meta name="title" content="Dream Pup Art. Crea un recuerdo personalizado de tu mascota" />
-        <meta name="description" content="Creamos ilustraciones originales y a medida de tu mascota. Regalos únicos para los amantes de los perros y gatos." />
+        <title>Dream Pup Art | Estilos</title>
+        <meta name="title" content="Descubre los estilos de arte que encajan con tu mascota" />
+        <meta name="description" content="Explora los estilos con los que crear una obra de arte de tu mascota. Regalos únicos para los amantes de los perros y gatos." />
         <meta name="keywords" content="regalos originales, perros, gatos" />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -62,19 +151,13 @@ export default function Home({ igFeed }) {
       </Head>
       <Ribbon />
       <main className={styles.main}>
-        <div className={styles.hero}>
-          <h1>🎨<br />Crea una obra de arte de tu mascota<br />🐶🐱</h1>
-          <div>
-            <Image
-              src="/hero1.webp"
-              alt="hero image"
-              layout='responsive'
-              width={400}
-              height={400}
-              priority
-            />
-          </div>
-        </div>
+        <AvailableStyles data={availableStyles} />
+        <a href='https://www.instagram.com/dream.pup.art/' target='_blank' className={styles.followUs}>
+          <span>Explora más en Instagram</span>
+        </a>
+        <p className={styles.subtitle}>
+          Si no encuentras el estilo que estás buscando, podemos crearlo para ti! Contáctanos
+        </p>
         <h2 id='order-now' className={styles.orderUs}>Haz tu pedido a través de:</h2>
         <div className={styles.contactUs}>
           <a href='https://ig.me/m/dream.pup.art' className={styles.followUs}>
@@ -117,45 +200,8 @@ export default function Home({ igFeed }) {
             </span>
           </a>
         </div>
-        <h2 className={styles.howItWorks}>¿Cómo funciona?</h2>
-        <Steps />
-        <p onClick={onClickOrderNow} className={`${styles.followUs} ${styles.orderNowButton}`}>
-          <span>Haz tu pedido ahora</span>
-        </p>
-        <GiftIdeas />
-        <AvailableStyles data={availableStyles} />
-        <a href='/styles' target='_blank' className={`${styles.followUs} ${styles.whatsapp} ${styles.moreStyles}`}>
-          <span>Ver más estilos</span>
-        </a>
-        <Reviews />
-        <a href='https://www.instagram.com/dream.pup.art/' target='_blank' className={styles.followUs}>
-          <span>Síguenos en Instagram</span>
-        </a>
-        <InstagramFeed feed={igFeed} />
       </main>
       <Footer />
     </div>
   )
-};
-
-export async function getStaticProps() {
-  const limit = 12;
-  const token = process?.env?.IG_TOKEN;
-  const igFeed = [];
-  if (token) {
-    console.log(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${limit}&access_token=${token}`);
-    try {
-      const igRs = await fetch(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${limit}&access_token=${token}`)
-      const igFeedRs = await igRs.json();
-      if (igFeedRs?.data) {
-        igFeedRs?.data.map((post) => {
-          igFeed.push(post);
-          return post;
-        })
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  return { props: { igFeed }};
 };
