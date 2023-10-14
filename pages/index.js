@@ -124,7 +124,7 @@ export default function Home({ igFeed }) {
         </p>
         <GiftIdeas />
         <AvailableStyles data={availableStyles} />
-        <a href='/styles' target='_blank' className={`${styles.followUs} ${styles.whatsapp} ${styles.moreStyles}`}>
+        <a href='/styles' className={`${styles.followUs} ${styles.whatsapp} ${styles.moreStyles}`}>
           <span>Ver más estilos</span>
         </a>
         <Reviews />

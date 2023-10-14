@@ -151,7 +151,25 @@ export default function Styles() {
       </Head>
       <Ribbon />
       <main className={styles.main}>
-        <AvailableStyles data={availableStyles} />
+        <div>
+          <a href='/' className={styles.logo}>
+            <span className={styles.logoWrapper}>
+              <Image
+                src="/logo.webp"
+                alt="dreampupart logo"
+                layout="fixed"
+                width={80}
+                height={80}
+                priority
+              />
+              <span className={styles.logoText}>
+                Dream Pup Art
+              </span>
+            </span>
+          </a>
+        </div>
+
+        <AvailableStyles data={availableStyles} title='Todos los estilos' />
         <a href='https://www.instagram.com/dream.pup.art/' target='_blank' className={styles.followUs}>
           <span>Explora más en Instagram</span>
         </a>

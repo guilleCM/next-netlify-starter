@@ -18,10 +18,10 @@ const Style = (props) => {
   );
 };
 
-const AvailableStyles = ({ data }) => {
+const AvailableStyles = ({ data, title = 'Estilos populares' }) => {
   return (
     <>
-      <h2 id='available-styles' className={styles.title}>Estilos populares</h2>
+      <h2 id='available-styles' className={styles.title}>{title}</h2>
       <div className={styles.wrapper}>
         {data.map((category) => (
           <div className={styles.category} key={category.id} >

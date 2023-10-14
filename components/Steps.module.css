@@ -34,6 +34,10 @@
   .step {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .moreStyles {
+    top: -2px;
+    padding: 2px 1em;
+  }
   .reverse > div:first-child {
     order: 2;
   }

@@ -48,6 +48,17 @@
   border-radius: 30px;
   transition: box-shadow 0.3s ease-in-out;
 }
+.logo {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+.logo > span {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .followUs:active {
   color: black;
 }
