@@ -75,8 +75,8 @@ const availableStyles = [
   },
   {
     id: '13',
-    media_url: '/available-styles/oil-painting/1.webp',
-    caption: 'Oil painting',
+    media_url: '/available-styles/cartoon/1.webp',
+    caption: 'Cartoon',
   },
   {
     id: '14',
@@ -105,8 +105,8 @@ const availableStyles = [
   },
   {
     id: '19',
-    media_url: '/available-styles/halloween/1.webp',
-    caption: 'Halloween',
+    media_url: '/available-styles/oil-painting/2.webp',
+    caption: 'Oil painting',
   },
   {
     id: '20',
@@ -158,8 +158,8 @@ export default function Styles() {
                 src="/logo.webp"
                 alt="dreampupart logo"
                 layout="fixed"
-                width={80}
-                height={80}
+                width={40}
+                height={40}
                 priority
               />
               <span className={styles.logoText}>
