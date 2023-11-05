@@ -149,7 +149,7 @@ export default function Styles() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <Ribbon />
+      {/* <Ribbon /> */}
       <main className={styles.main}>
         <div>
           <a href='/' className={styles.logo}>

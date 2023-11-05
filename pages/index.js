@@ -60,8 +60,25 @@ export default function Home({ igFeed }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <Ribbon />
+      {/* <Ribbon /> */}
       <main className={styles.main}>
+        <div>
+          <a href='/' className={styles.logo}>
+            <span className={styles.logoWrapper}>
+              <Image
+                src="/logo.webp"
+                alt="dreampupart logo"
+                layout="fixed"
+                width={40}
+                height={40}
+                priority
+              />
+              <span className={styles.logoText}>
+                Dream Pup Art
+              </span>
+            </span>
+          </a>
+        </div>
         <div className={styles.hero}>
           <h1>🎨<br />Crea una obra de arte de tu mascota<br />🐶🐱</h1>
           <div>
