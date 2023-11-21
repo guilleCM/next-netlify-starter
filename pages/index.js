@@ -174,5 +174,10 @@ export async function getStaticProps() {
       console.log(error);
     }
   }
-  return { props: { igFeed }};
+  return {
+    props: {
+      igFeed
+    },
+    revalidate: 86400,
+  };
 };
