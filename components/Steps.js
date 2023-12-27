@@ -53,7 +53,7 @@ export default function Steps() {
       <div className={styles.step}>
         <div>
           <h2>
-            3. Aprueva los resultados
+            3. Aprueba los resultados
           </h2>
           <p>Crearemos 4 ilustraciones de cada estilo que hayas elegido. Elige las que más te gusten o quédatelas todas. Si quieres modificar algo aún estas a tiempo.</p>
         </div>
